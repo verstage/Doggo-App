@@ -57,7 +57,7 @@ function createSlideShow(images) {
         document.getElementById('slideshow').insertAdjacentHTML("beforeend", `<div class="slide" style="background-image: url('${images[currentPosition]}')"></div>`)
         
         deleteFirstPhotoDelay = setTimeout(function() {
-            document.querySelector(".slide").remove;
+            document.querySelector(".slide").remove();
         },1000);
 
         if(currentPosition + 1 >= images.length) {
