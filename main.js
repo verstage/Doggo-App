@@ -28,7 +28,6 @@ async function loadByBreed(breed) {
     const response = await fetch(`https://dog.ceo/api/breed/${breed}/images`);
     const data = await response.json();
     createSlideShow(data.message);
-    console.log(data.message);
    }
 }
 
@@ -59,7 +58,7 @@ function createSlideShow(images) {
         deleteFirstPhotoDelay = setTimeout(function() {
             document.querySelector(".slide").remove();
         },1000);
-        
+
 
         if(currentPosition + 1 >= images.length) {
             currentPosition = 0;
