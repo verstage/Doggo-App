@@ -28,6 +28,7 @@ async function loadByBreed(breed) {
     const response = await fetch(`https://dog.ceo/api/breed/${breed}/images`);
     const data = await response.json();
     createSlideShow(data.message);
+    console.log(data.message);
    }
 }
 
@@ -47,7 +48,7 @@ function createSlideShow(images) {
         
         timer = setInterval(nextSlide, 3000);
     }else {
-       ` <div class="slide" style="background-image: url('${images}')"></div>
+        document.getElementById('slideshow').innerHTML = ` <div class="slide" style="background-image: url('${images[0]}')"></div>
        <div class="slide"></div>
        `
     }
