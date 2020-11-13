@@ -59,6 +59,7 @@ function createSlideShow(images) {
         deleteFirstPhotoDelay = setTimeout(function() {
             document.querySelector(".slide").remove();
         },1000);
+        
 
         if(currentPosition + 1 >= images.length) {
             currentPosition = 0;
