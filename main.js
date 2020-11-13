@@ -48,9 +48,8 @@ function createSlideShow(images) {
         
         timer = setInterval(nextSlide, 3000);
     }else {
-        document.getElementById('slideshow').innerHTML = ` <div class="slide" style="background-image: url('${images[0]}')"></div>
-       <div class="slide"></div>
-       `
+        document.getElementById('slideshow').innerHTML = `<div class="slide" style="background-image: url('${images[0]}')"></div>
+       <div class="slide"></div>`
     }
     
 
